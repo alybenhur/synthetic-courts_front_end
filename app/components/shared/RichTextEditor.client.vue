@@ -422,17 +422,13 @@
 
 <script setup lang="ts">
 import { useEditor, EditorContent } from '@tiptap/vue-3'
-import StarterKit from '@tiptap/starter-kit'
-import Table from '@tiptap/extension-table'
-import TableRow from '@tiptap/extension-table-row'
-import TableCell from '@tiptap/extension-table-cell'
-import TableHeader from '@tiptap/extension-table-header'
-import Image from '@tiptap/extension-image'
-import Link from '@tiptap/extension-link'
-import TextAlign from '@tiptap/extension-text-align'
-import Underline from '@tiptap/extension-underline'
-import { TextStyle } from '@tiptap/extension-text-style'
-import Color from '@tiptap/extension-color'
+import { StarterKit } from '@tiptap/starter-kit'
+import { Table, TableRow, TableCell, TableHeader } from '@tiptap/extension-table'
+import { Image } from '@tiptap/extension-image'
+import { Link } from '@tiptap/extension-link'
+import { TextAlign } from '@tiptap/extension-text-align'
+import { Underline } from '@tiptap/extension-underline'
+import { TextStyle, Color } from '@tiptap/extension-text-style'
 
 const props = defineProps<{ modelValue: string }>()
 const emit  = defineEmits<{ 'update:modelValue': [value: string] }>()
