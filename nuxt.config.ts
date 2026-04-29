@@ -4,10 +4,6 @@ export default defineNuxtConfig({
   modules: ['@pinia/nuxt'],
 
   nitro: {
-     prerender: {
-      crawlLinks: true,
-      routes: ['/favicon.ico', '/robots.txt'],
-    },
     preset: 'node-server',
   },
 
@@ -23,7 +19,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBase: 'http://localhost:8001/api',
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:8001/api',
     },
   },
 
