@@ -16,4 +16,4 @@ COPY --from=builder /app/.output /app/.output
 
 ENV NITRO_HOST=0.0.0.0
 
-CMD ["sh", "-c", "NITRO_PORT=${PORT:-3000} node .output/server/index.mjs"]
+CMD ["node", ".output/server/index.mjs"]
