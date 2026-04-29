@@ -3,6 +3,10 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   modules: ['@pinia/nuxt'],
 
+  nitro: {
+    preset: 'node-server',
+  },
+
   components: {
     dirs: [
       { path: '~/components', pathPrefix: false },
