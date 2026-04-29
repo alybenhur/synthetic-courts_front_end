@@ -4,6 +4,10 @@ export default defineNuxtConfig({
   modules: ['@pinia/nuxt'],
 
   nitro: {
+     prerender: {
+      crawlLinks: true,
+      routes: ['/favicon.ico', '/robots.txt'],
+    },
     preset: 'node-server',
   },
 
